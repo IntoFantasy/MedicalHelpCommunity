@@ -48,15 +48,15 @@
         <form class="forms_form">
           <fieldset class="forms_fieldset">
             <div class="forms_field">
-              <input type="email" placeholder="Email" class="forms_field-input" required autofocus />
+              <input type="email" id="emailLogin" name="emailLogin" placeholder="Email" class="forms_field-input" required autofocus />
             </div>
             <div class="forms_field">
-              <input type="password" placeholder="Password" class="forms_field-input" required />
+              <input type="password" id="passwordLogin" name="passwordLogin" placeholder="Password" class="forms_field-input" required />
             </div>
           </fieldset>
           <div class="forms_buttons">
             <button type="button" class="forms_buttons-forgot">Forgot password?</button>
-            <input type="submit" value="Log In" class="forms_buttons-action">
+            <input type="button" value="Log In" class="forms_buttons-action" onclick="login()">
           </div>
         </form>
       </div>
@@ -85,5 +85,7 @@
 <!-- partial -->
   <script  src="static/script.js"></script>
 <script  src="static/script(LifeLine).js"></script>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+
 </body>
 </html>

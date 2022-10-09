@@ -20,3 +20,27 @@ loginButton.addEventListener('click', () => {
   userForms.classList.remove('bounceLeft')
   userForms.classList.add('bounceRight')
 }, false)
+
+function login() {
+  var arr = {
+    "emailLogin":"emailLogin",
+    "passwordLogin":"passwordLogin"
+  }
+  $.ajax({
+    type: "POST",
+    dataType: "json",
+    url: "http://127.0.0.1:9300/index" ,
+    data:{
+      emailLogin: $("[name=emailLogin]").val(),
+      passwordLogin: $("[name=passwordLogin]").val()
+    },
+    success: function(result){
+      var obj =JSON.parse(result);
+      if(obj.code === 200){
+        alert("success")
+      }else{
+        alert("fail");
+      }
+    }
+  });
+}
