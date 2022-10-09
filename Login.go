@@ -55,7 +55,7 @@ func login(w http.ResponseWriter, r *http.Request) {
 		emailLogin := email[0]
 		password, _ := r.Form["passwordLogin"]
 		passwordLogin := password[0]
-		if emailLogin == "12345678@qq.com" && passwordLogin == "123" {
+		if emailLogin == "137136245@qq.com" && passwordLogin == "123" {
 			fmt.Println("go")
 			http.Redirect(w, r, "/homepage", http.StatusTemporaryRedirect)
 			arr := &result{

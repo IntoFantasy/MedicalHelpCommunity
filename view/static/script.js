@@ -29,7 +29,7 @@ function login() {
   $.ajax({
     type: "POST",
     dataType: "json",
-    url: "http://127.0.0.1:9300/index" ,
+    url: "http://127.0.0.1:9300/login" ,
     data:{
       emailLogin: $("[name=emailLogin]").val(),
       passwordLogin: $("[name=passwordLogin]").val()
