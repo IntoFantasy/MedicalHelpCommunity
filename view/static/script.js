@@ -22,6 +22,7 @@ loginButton.addEventListener('click', () => {
 }, false)
 
 function login() {
+  window.location.href='/homepage';
   var arr = {
     "emailLogin":"emailLogin",
     "passwordLogin":"passwordLogin"
@@ -35,9 +36,11 @@ function login() {
       passwordLogin: $("[name=passwordLogin]").val()
     },
     success: function(result){
-      var obj =JSON.parse(result);
-      if(obj.code === 200){
-        alert("success")
+      // var obj =JSON.parse(result);
+      console.log(result);
+      if(result.Code === 200){
+        // window.location.href='/homepage';
+        alert("success");
       }else{
         alert("fail");
       }

@@ -50,13 +50,13 @@ func login(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Access-Control-Allow-Origin", "*")
 	r.ParseForm()
 	if r.Method == "POST" || r.Method == "GET" {
-		fmt.Println(r.Form)
+		//fmt.Println(r.Form)
 		email, _ := r.Form["emailLogin"]
 		emailLogin := email[0]
 		password, _ := r.Form["passwordLogin"]
 		passwordLogin := password[0]
 		if emailLogin == "137136245@qq.com" && passwordLogin == "123" {
-			fmt.Println("go")
+			//fmt.Println("go")
 			http.Redirect(w, r, "/homepage", http.StatusTemporaryRedirect)
 			arr := &result{
 				200,
